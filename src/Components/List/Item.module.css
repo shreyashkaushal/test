@@ -1,0 +1,10 @@
+.ul li {
+  background: #cce5ff;
+  margin: 5px;
+  text-align: center;
+  
+}
+
+.ul{
+    list-style-type: none;
+}

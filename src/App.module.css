@@ -1,76 +1,25 @@
 .App {
   text-align: center;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-
-}
-
-.Form{
-  display: flex;
-  padding: 10px 20px;
-  color: #282c34;
-  background-color: blueviolet;
-  text-align: center;
   justify-content: center;
   width: 80%;
- margin: 8px 0;
+  padding: 94px 24px;
+  margin: 31px 101px;
   box-sizing: border-box;
-  flex-direction: column;
+  background-color: grey;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-.Post {
-  width: 250px;
-  padding: 16px;
+.List{
   text-align: center;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 3px #ccc;
-  margin: 10px;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  background-color: lightblue;
+  padding: 94px 24px;
+  margin: 31px 101px;
   box-sizing: border-box;
-  cursor: pointer;
-}
-
-.Post:hover,
-.Post:active {
-  background-color: #C0DDF5;
-}
-
-.Author {
-  margin: 16px 0;
-  color: #ccc;
-}
-.Button {
-  background-color: transparent;
-  border: none;
-  color: white;
-  outline: none;
-  cursor: pointer;
-  font: inherit;
-  padding: 10px;
-  margin: 10px;
-  font-weight: bold;
-}
-
-.Button:first-of-type {
-  margin-left: 0;
-  padding-left: 0;
 }
 

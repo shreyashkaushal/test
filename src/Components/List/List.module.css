@@ -1,0 +1,19 @@
+.Clear {
+    background-color: rgb(219, 96, 14);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 20px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+  }
+  .List{
+
+        background: #3399ff;
+        padding: 20px;
+       
+      
+  }

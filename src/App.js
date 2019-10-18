@@ -1,19 +1,46 @@
 import React,{Component} from 'react';
 import styles from  './App.module.css';
-//import Input from '../src/Input/Input';
-//import Output from './Output/Output'
+import InputItems from './Components/Input/InputItems';
+import List from './Components/List/List';
+import uuid from 'uuid';
+
 
 class App extends Component {
   state={
+    list:[],
+    id:uuid(),
     value:''
   }
 
-  handleChange=(event)=>{ 
-    return this.setState({value: event.target.value});
+  changeHandler=(event)=>
+  {
+    this.setState({
+    value:event.target.value
+    })
   }
-  saveChanges =()=>{
-    const output = this.state.value;
-    console.log(output);
+
+  submitListHandler=(event)=>
+
+  {
+    event.preventDefault();
+    const newValue={
+      id: this.state.id,
+      title:this.state.value
+    }
+    console.log(newValue);
+    const updatedList =[...this.state.list,newValue]
+    this.setState({
+      list:updatedList,
+      value:'',
+      id: uuid()
+    })
+  }
+
+  clearListHandler=()=>
+  {
+    this.setState({
+      list:[]
+    })
   }
   
   
@@ -23,20 +50,23 @@ class App extends Component {
       
       <>
       <div className={styles.App}>
-      <form className={styles.Form} >
-        <label><strong>
-           TODO</strong><br></br><br></br>
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label><br></br><br></br>
-        <input className={styles.Button} type="submit" value="ADD" onClick={this.saveChanges} />
-      </form>
-      <div className={styles.Post}>
-      <p>{this.state.value}</p>
-      </div>
+      <h1>TODO LIST</h1>
+      <InputItems 
+      value={this.state.value} 
+      change={this.changeHandler}
+      submitList={this.submitListHandler}
+
+      />
+       </div>
+       <div className={styles.List}>
+       <List list={this.state.list}
+        clear={this.clearListHandler}
+      />
+
+       </div>
+           
+      </>)
+      }
       
-      </div>
-       </>
-    );
-  }
-}
+    }
 export default App;
