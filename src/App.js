@@ -59,6 +59,7 @@ class App extends Component {
       />
        </div>
        <div className={styles.List}>
+       <h1>LIST</h1>
        <List list={this.state.list}
         clear={this.clearListHandler}
       />
