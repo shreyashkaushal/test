@@ -17,7 +17,7 @@ const list = (props) =>(
 
    
 
-        <button className={styles.Clear} type='button' onClick={props.clear}>CLEAR LIST</button>
+        <button className='btn btn-danger' type='button' onClick={props.clear}>CLEAR LIST</button>
     </ul>
 );
 export default list;
